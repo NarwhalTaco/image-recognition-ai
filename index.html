@@ -15,18 +15,11 @@
         </p> 
     </center>
 
-    <p>
-        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
-    </p>
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
 
-    <p>
-        <label for="file" style="cursor: pointer;">Click me to Upload Image</label>
-    </p>
+    <p><label for="file" style="cursor: pointer;">Click me to Upload Image</label></p>
 
-    <p>
-        <img id="output" width="200" positon="top"/>
-    </p>
-
+    <p><img id="output" width="200" positon="top"/></p>
 
     <script>
         function saveImageAs () {
@@ -43,3 +36,9 @@
     </script>
 </body>
 </html>
+
+<button onclick="showImg()">Click Me!</button>
+    <div class="catImg">
+
+    </div>
+    <script src="script.js"></script>
