@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload = "initialize()">
+    <img id = "image" src = "cat-png-17.png">
+    <canvas id = "canvas"></canvas>
+</body>
+<script>
+    let image = document.getElementById("image");
+    function initialize() {
+        let img = cv.imread(image);
+        let mat = new cv.Mat();
+
+        cv.cvtColor(img, mat, cv.COLOR_RGBA2GRAY);
+        let faces = new cv.RectVector();
+        let faceCascade = new cv.CascadeClassifier();   
+        faceCascade.load('C:\\Users\\posei\\OneDrive\\Documents\\Personal Projects\\tetst\\haarcascade_frontalcatface.xml');
+
+        let imgSize = new cv.Size(0, 0);
+        
+        faces = faceCascade.detectMultiScale(mat, faces, 1.1, 1, 0, imgSize, imgSize);
+        cv.imshow("canvas", mat);
+    }
+</script>
+
+<script async src = "opencv.js"></script>
+</html>
