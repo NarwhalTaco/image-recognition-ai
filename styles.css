@@ -1,0 +1,19 @@
+body{
+    background-color: darkgray;
+}
+p{
+    color: white;
+    background-color: black;
+  
+}
+.dog{
+    height: 300px;
+    width: 300px;
+}
+img{
+    height: 400px;
+    width: auto;
+    position: center;
+    margin-top: 100px;
+    margin-left: -200px;
+}
