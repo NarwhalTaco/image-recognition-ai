@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>AI images</title>
+    </head>
+    <body>
+        <script>
+            function saveImageAs () {
+                var imgOrURL;
+                embedImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA" +
+                                 "AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO" +
+                                 "9TXL0Y4OHwAAAABJRU5ErkJggg==";
+                imgOrURL = embedImage;
+                if (typeof imgOrURL == 'object')
+                    imgOrURL = embedImage.src;
+                window.win = open(imgOrURL);
+                setTimeout('win.document.execCommand("SaveAs")', 0);
+            }
+        </script>
+        </head>
+        <body>
+            <a href="#" ONCLICK="saveImageAs(); return false" >save image</a>
+    
+            <img id="embedImage" alt="Red dot">
+        </body>
+    
+    </body>
+</html>
