@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-       <title>AI images</title>
-    </head>
-    <body>
-        <script>
-            function saveImageAs () {
-                var imgOrURL;
-                embedImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA" +
-                                 "AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO" +
-                                 "9TXL0Y4OHwAAAABJRU5ErkJggg==";
-                imgOrURL = embedImage;
-                if (typeof imgOrURL == 'object')
-                    imgOrURL = embedImage.src;
-                window.win = open(imgOrURL);
-                setTimeout('win.document.execCommand("SaveAs")', 0);
-            }
-        </script>
-        </head>
-        <body>
-            <a href="#" ONCLICK="saveImageAs(); return false" >save image</a>
-    
-            <img id="embedImage" alt="Red dot">
-        </body>
-    
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI images</title>
+</head>
+<body>
+    <center>
+        <p>
+            <big> 
+                IS THIS A CAT 
+            </big> 
+        </p> 
+    </center>
+
+    <p>
+        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+    </p>
+
+    <p>
+        <label for="file" style="cursor: pointer;">Click me to Upload Image</label>
+    </p>
+
+    <p>
+        <img id="output" width="200" positon="top"/>
+    </p>
+
+
+    <script>
+        function saveImageAs () {
+            var imgOrURL;
+            embedImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA" +
+                                "AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO" +
+                                "9TXL0Y4OHwAAAABJRU5ErkJggg==";
+            imgOrURL = embedImage;
+            if (typeof imgOrURL == 'object')
+                imgOrURL = embedImage.src;
+            window.win = open(imgOrURL);
+            setTimeout('win.document.execCommand("SaveAs")', 0);
+        }
+    </script>
+</body>
 </html>
